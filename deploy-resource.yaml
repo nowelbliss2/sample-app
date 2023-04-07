@@ -1,0 +1,16 @@
+kind: ImageStream
+apiVersion: image.openshift.io/v1
+metadata:
+  name: sample-app-git
+  namespace: sample-app
+  labels:
+    app: sample-app-git
+    app.kubernetes.io/component: sample-app-git
+    app.kubernetes.io/instance: sample-app-git
+    app.kubernetes.io/name: sample-app-git
+    app.kubernetes.io/part-of: sample-app-git-app
+    app.openshift.io/runtime: golang
+    app.openshift.io/runtime-version: 1.16.7-ubi7
+spec:
+  lookupPolicy:
+    local: false
